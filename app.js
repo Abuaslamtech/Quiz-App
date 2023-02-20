@@ -1,18 +1,38 @@
 var questions = [
   {
-    question: "What is the capital of France?",
-    choices: ["Paris", "Rome", "London", "Madrid"],
+    question: "Who is the CEO of facebook?",
+    choices: ["Mark", "Elon", "Abuaslam", "Rakesh"],
     correctAnswer: 0,
   },
   {
-    question: "What is the largest ocean in the world?",
-    choices: ["Atlantic", "Pacific", "Indian", "Arctic"],
-    correctAnswer: 1,
+    question: "Which of these is not a programming language?",
+    choices: ["Python", "C++", "Java", "HTML"],
+    correctAnswer: 3,
   },
   {
     question: "What is the father of computer?",
     choices: ["Charles Babbage", "Pascal", "Newton", "Charles Gabbage"],
+    correctAnswer: 0,
+  },
+  {
+    question: "What is the full meaning of CSS?",
+    choices: [
+      "Content Styling Script",
+      "Cascading Style Sheet",
+      "Cascading Styling Sheets",
+      "Come Sit Sing",
+    ],
     correctAnswer: 1,
+  },
+  {
+    question: "What is the full meaning of HTML ?",
+    choices: [
+      "Hot Tall Meat Lamb",
+      "HTML",
+      "Unknown",
+      "HyperText Markup Language",
+    ],
+    correctAnswer: 3,
   },
 ];
 
@@ -29,12 +49,16 @@ function displayQuestion() {
     var choice = question.choices[i];
     var label = document.createElement("label");
     var radio = document.createElement("input");
+    var el = document.createElement("div");
     radio.type = "radio";
     radio.name = "question" + currentQuestion;
     radio.value = i;
-    label.appendChild(radio);
+    // label.appendChild(radio);
+    el.className = "inputs";
     label.appendChild(document.createTextNode(choice));
-    choices.appendChild(label);
+    el.appendChild(radio);
+    el.appendChild(label);
+    choices.appendChild(el);
   }
 }
 

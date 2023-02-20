@@ -1,9 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 header {
   text-align: center;
+  font-weight: 800;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
 }
 #quiz {
   width: 50%;
@@ -11,12 +20,25 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
   margin: auto;
-  padding: 4rem;
+  padding: 2rem 1rem;
   box-sizing: border-box;
-  margin-top: 5rem;
   font-size: 1.2rem;
+  border-radius: 1rem;
+}
+.inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #4caf50;
+  color: #fff;
+  width: 90%;
+  margin: auto;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
 }
 
 #question {
@@ -25,9 +47,18 @@ header {
 }
 
 #choices {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 70%;
+  margin: auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  padding: 2rem 0.5rem;
+  font-size: 1.5rem;
+  box-sizing: border-box;
 }
-
 #choices label {
   display: block;
   margin-bottom: 10px;
@@ -40,6 +71,8 @@ header {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 #result {
@@ -52,4 +85,34 @@ header {
   margin: auto;
   padding: 2rem;
   box-sizing: border-box;
+}
+@media screen and (max-width: 400px) {
+  #quiz {
+    width: 80%;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+  #question {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    font-weight: 800;
+    color: #4caf50;
+  }
+  #choices {
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 100%;
+  }
+  #result {
+    width: 80%;
+    height: 2rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1.3rem;
+    font-weight: 900;
+  }
 }
